@@ -1,0 +1,19 @@
+<%- include('partials/header') %> 
+
+<form class="form-signin" action="/login" method="POST">
+    <img class="mb-4" src="images/user1.png" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Please Register</h1>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="text" id="inputUsername" name="username" class="form-control" placeholder="Username" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+</form>
+
+<%- include('partials/footer') %> 

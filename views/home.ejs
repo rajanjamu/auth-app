@@ -1,1 +1,21 @@
-<h1>Home Page</h1>
+<%- include('partials/header') %> 
+
+<div class="card" style="width: 18rem;">
+    <h5 class="card-header card-title"><i class="fas fa-dharmachakra"></i> AUTH APP</h5>
+    <div class="card-body">
+      <h6 class="card-subtitle mb-2 text-muted">Welcome, <%= (isLoggedIn) ? user.username.charAt(0).toUpperCase() + user.username.slice(1) : 'Parth' %>!</h6>
+      <p class="card-text">This is a simple authorization application written in MEN stack.</p>
+    
+      <% if (isLoggedIn) { %> 
+        <a href="/secret" class="card-link btn btn-danger btn-sm"><i class="fas fa-key"></i> Secret</a>
+        <a href="/logout" class="card-link btn btn-warning btn-sm"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      <% } else { %>
+        <a href="/register" class="card-link btn btn-info btn-sm"><i class="fas fa-user-plus"></i> Register</a>
+        <a href="/login" class="card-link btn btn-success btn-sm"><i class="fas fa-sign-in-alt"></i> Login</a>
+      <% } %> 
+
+    </div>
+    <div class="card-footer text-muted">&copy; Rajan</div>
+  </div>
+
+<%- include('partials/footer') %> 
